@@ -1,0 +1,34 @@
+Ett objekt är en instans av en klass. Den behöver en klass med olika attributer och en konstruktor som används för att
+initialisera objektet.
+    Exempel:
+    Public class Person{
+        //Attributer som kommer användas föra att skapa objekt
+        String name;
+        int age;
+
+        //Konstruktor som används föra att initialisera objektet och ändra värderna i dess attributer
+        public Person(String myName, int myAge){
+            name = myName;
+            age = myAge;
+        }
+
+        // En metod som skriver ut objektets name
+        public void printName(){
+            System.out.println(name);
+        }
+    }
+    public class Main{
+        public static void main(String[] args){
+            // Här skapar vi sedan vårt object med name Isak och age 21
+            Person firstPerson = new Person("Isak", 21);
+
+            //Sedan kan vi kalla på eventuella metoder från Person klassen för att interagera med objektet.
+            firstPerson.printName();
+        }
+    }
+
+Versionshantering
+
+TDD fungerar så att vi först får krav och börjar sedan skriva ett test, kör testet och det misslyckas eftersom
+vi inte har någon kod ännu. Därefter skriver vi kod som får testet att bli godkänt. Vi skriver ett nytt test,
+testet körs, blir inte godkänt, vi uppdaterar koden och repeterar tills vi är nöjda.
