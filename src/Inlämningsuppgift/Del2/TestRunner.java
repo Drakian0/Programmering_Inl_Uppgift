@@ -10,7 +10,7 @@ public class TestRunner {
         int expected = 3;
 
         counter.count("Hej");
-        int actual = counter.chars;
+        int actual = counter.getChars();
 
         assertEquals(expected, actual);
     }
@@ -21,7 +21,7 @@ public class TestRunner {
         boolean expected = false;
 
         counter.count("stop");
-        boolean actual = counter.on;
+        boolean actual = counter.isOn();
 
         assertEquals(expected, actual);
     }
@@ -32,7 +32,7 @@ public class TestRunner {
         int expected = 2;
 
         counter.count("Hej Isak");
-        int actual = counter.words;
+        int actual = counter.getWords();
 
         assertEquals(expected, actual);
     }
